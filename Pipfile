@@ -6,12 +6,12 @@ name = "pypi"
 [packages]
 requests = "*"
 numpy = "*"
-tensorflow = "*"
 tensorflow-hub = "*"
 fastapi = "*"
 uvicorn = {extras = ["standard"], version = "*"}
 pillow = "*"
 python-multipart = "*"
+tensorflow-cpu = "*"
 
 [dev-packages]
 
