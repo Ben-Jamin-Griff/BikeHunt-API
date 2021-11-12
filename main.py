@@ -11,7 +11,7 @@ app = FastAPI()
 async def read_root():
   return {"message": "Welcome to BikeHunt API"}
 
-@app.post("api/predict")
+@app.post("/api/predict")
 async def predict_image(file: UploadFile = File(...)):
   extension = file.filename.split(".")[-1] in ("jpg", "jpeg", "png")
   if not extension:
