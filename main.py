@@ -7,11 +7,11 @@ model = load_model("20211017-17281634491703-1000-images-mobilenetv2-Adam.h5")
 
 app = FastAPI()
 
-@app.get("/")
+@app.get("/api")
 async def read_root():
   return {"message": "Welcome to BikeHunt API"}
 
-@app.post("/predict")
+@app.post("api/predict")
 async def predict_image(file: UploadFile = File(...)):
   extension = file.filename.split(".")[-1] in ("jpg", "jpeg", "png")
   if not extension:
